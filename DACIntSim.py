@@ -1,7 +1,11 @@
+# Simuleer de DAC m.b.v. het PyBoard en microPython
+# Schakelaar Usr op het PyBoard
+# 3 Led voor de simulatie van de ingangen
+
 L1= Pin('X1', Pin.OUT_PP)
 L2= Pin('X2', Pin.OUT_PP)
 L3= Pin('X3', Pin.OUT_PP)
-	
+
 # ingebouwde usr switch
 sw = pyb.Switch()
 
@@ -19,7 +23,7 @@ def SwitchPressed():
 			c=0
 		else:
 			c+=1
-			
+
 # test het looplicht
 
 sw.callback(SwitchPressed)
